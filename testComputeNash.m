@@ -10,7 +10,7 @@ M = tril(rand(n)*50+25,-1);
 Ds = M + M'; % D values 
 
 %% Solve
-[A,b,x_sol] = computeX(ws,wf,ks,Ds);
+[A,b,x_sol] = computeNash(ws,wf,ks,Ds);
 disp(x_sol)
 
 %% Evaluate

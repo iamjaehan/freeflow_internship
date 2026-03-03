@@ -1,4 +1,4 @@
-function [A, b, x_sol] = computeX(ws, wf, ks, Ds)
+function [A, b, x_sol] = computeNash(ws, wf, ks, Ds)
     % Number of players
     N = length(ks);
     
@@ -10,16 +10,16 @@ function [A, b, x_sol] = computeX(ws, wf, ks, Ds)
     for i = 1:N
         for j = 1:N
             if i == j
-                % A(i, j) = (N - 1) * ws + wf * ks(i)^2; % Diagonal elements
+                A(i, j) = %TODO % Diagonal elements
             else
-                % A(i, j) = ws - wf * ks(i) * ks(j); % Off-diagonal elements
+                A(i, j) = % TODO % Off-diagonal elements
             end
         end
     end
     
     % Construct b vector
     for i = 1:N
-        % b(i) = ws * sum(Ds(i, setdiff(1:N, i))); % Sum over relevant D values
+        b(i) = % TODO % Sum over relevant D values
     end
     
     % Solve Ax = b
